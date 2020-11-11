@@ -67,6 +67,7 @@ programa
 				escreva("[",M2[l][c],"] ")
 			}
 			escreva("\n")
+			//also teste
 		}
 	}
 }
@@ -75,7 +76,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 858; 
+ * @POSICAO-CURSOR = 1544; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
