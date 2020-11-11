@@ -35,7 +35,7 @@ programa
 			escreva(vet[y]," ")
 			se (y==9)
 			{
-				escreva("as rep do maior valor foram de ",rep)
+				escreva("As quantia de vezes que o maior valor foi tirado no dado foi de ",rep)
 			}
 		}
 	}
@@ -45,7 +45,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 485; 
+ * @POSICAO-CURSOR = 867; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
