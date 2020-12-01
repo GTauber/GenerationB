@@ -1,0 +1,48 @@
+Atividade 06:
+
+create database db_petshop;
+----------------------------
+use db_petshop;
+create table tb_animais(
+ID bigint auto_increment,
+Name varchar(100),
+Peso_in_kg bigint(10),
+Mamifero boolean,
+Vivo boolean,
+primary key (ID));
+----------------------------
+use db_petshop;
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Gabriel", 60, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Mikayla", 10, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Eduardo", 15, false, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Lana", 4, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Katia", 23, false, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Rebeca", 28,true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Lucas", 40, false, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Naruto", 51, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Sasuke", 51, false, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Elizabeth", 57, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Shisui", 69, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Luan", 39, false, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Henrique", 20, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Anderson", 40, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Pedro", 15, true, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Victória", 70, false, true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Leonardo", 17, true,  true);
+insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Jumanji", 87, true, true);
+
+---------------------------------------------------------------------------------------------
+use db_petshop;
+select * from tb_animais where Name= "%b%"
+------------------------------------
+use db_petshop;
+select * from tb_animais where Peso_in_kg >20;
+----------------------------------------------
+use db_petshop;
+delete  from tb_animais where ID=18;
+------------------------------------
+use db_petshop;
+update tb_animais set Name = "Bravin" where id=12;
+update tb_animais set Name = "abravin" where id=13;
+----------------------------------------------------
+

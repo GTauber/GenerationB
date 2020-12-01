@@ -1,0 +1,47 @@
+Atividade 5
+-----------
+
+use db_escola;
+create table tb_alunos(
+ID bigint auto_increment,
+Name varchar(100),
+Nr_Chamada bigint,
+Turma varchar(30),
+Notas double(2,2),
+primary key (ID));
+---------------------------------
+use db_escola;
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Gabriel", 1, "Turma A",9);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Mikayla", 2, "Turma A",8);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Eduardo", 3, "Turma A",8);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Lana", 4, "Turma A",8);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Katia", 5, "Turma A",10);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Rebeca", 6, "Turma A",10);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Lucas", 7, "Turma A",9);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Naruto", 8, "Turma A",5);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Sasuke", 9, "Turma A",3);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Elizabeth", 10, "Turma B",8);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Shisui", 11, "Turma B",7);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Luan", 12, "Turma B",4);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Henrique", 13, "Turma B",2);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Anderson", 14, "Turma B",6);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Pedro", 15, "Turma B",0);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Victória", 16, "Turma B",8);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Leonardo", 17, "Turma B",7);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("Jumanji", 18, "Turma B",10);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("No esquadro", 19, "Turma B",5);
+insert into tb_alunos (Name, Nr_Chamada, Turma, Notas) value ("debbeee", 20, "Turma B",1);
+-------------------------------------------------------------------------------------------
+use db_escola;
+select * from tb_alunos where Notas >7;
+----------------------------------------
+use db_escola;
+select * from tb_alunos where Notas <7;
+----------------------------------------
+use db_escola;
+delete from tb_alunos where id =19;
+----------------------------------------
+use db_escola;
+update tb_alunos set notas = 12 where id=1;
+
+

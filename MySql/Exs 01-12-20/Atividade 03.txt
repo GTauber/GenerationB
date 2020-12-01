@@ -1,0 +1,51 @@
+Atividade 3:
+
+use db_tauberrh;
+create table tb_func(
+ID bigint,
+Name varchar(100),
+Level int,
+Email varchar(30),
+Salary double(10,2));
+-----------------------------------------
+use db_tauberrh;
+alter table tb_func
+MODIFY COLUMN ID bigint auto_increment,
+add primary key(ID);
+------------------------------------------
+use db_tauberrh;
+alter table tb_func
+drop column Email,
+add column Ativo boolean;
+------------------------------------------
+use db_tauberrh;
+insert into tb_func (Name, Level, Salary, Ativo) values ("Gabriel", 10, 999999, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Mikayla", 9, 100000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Eduardo", 7, 30000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Lana", 8, 50000, false);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Katia", 9, 250000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Rebeca", 9, 119999, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Lucas", 5, 15000, false);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Naruto", 5, 15000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Sasuke", 5, 15600, false);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Elizabeth", 5, 10000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Shisui", 5, 15000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Luan", 4, 7000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Henrique", 3, 5000, true);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Anderson", 3, 4500, false);
+insert into tb_func (Name, Level, Salary, Ativo) values ("Pedro", 2, 3000, true);
+--------------------------------------------------------------------------------------
+use db_tauberrh;
+select * from tb_func where Salary >2000;
+------------------------------------------
+use db_tauberrh;
+select * from tb_func where Salary <2000;
+------------------------------------------
+use db_tauberrh;
+update tb_func set Level = 10, Salary = 900000 where id=5;
+-------------------------------------------------------------
+use db_tauberrh;
+delete from tb_func where id =14;
+---------------------------------------
+use db_tauberrh;
+select * from tb_func

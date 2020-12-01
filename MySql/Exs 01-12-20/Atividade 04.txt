@@ -1,0 +1,51 @@
+Atividade 4:
+
+use db_ecommerce;
+create table tb_produtos(
+ID bigint,
+Name varchar(100),
+Marca varchar(10),
+Valor bigint,
+Disponivel boolean,
+primary key (ID));
+----------------------------
+use db_ecommerce;
+alter table tb_produtos
+MODIFY COLUMN ID bigint auto_increment;
+----------------------------------------
+use db_ecommerce;
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador R3", "AMD", 600, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador R5", "AMD", 1500, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador R7", "AMD", 2500, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador Threadripper", "AMD", 35000, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador I3", "Intel", 700, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador I5", "Intel", 1500, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador I7", "Intel", 2800, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Processador I9", "Intel", 4000, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Placa de vídeo RTX 3090", "NVIDIA", 20000, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Placa de vídeo RTX 3080", "NVIDIA", 9000, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Placa de vídeo RTX 3070", "NVIDIA", 5000, true);
+insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Monitor 1240hz SUPER 10K", "SUPER TAUBER MEGA MEGA", 1000000, true);
+-------------------------------------------------------------------------------------------
+use db_ecommerce
+select * from tb_produtos where Valor >500;
+-------------------------------------------
+use db_ecommerce
+select * from tb_produtos where Valor <500;
+-------------------------------------------
+use db_ecommerce;
+select * from tb_produtos where Valor >=700 && Valor <= 900;
+------------------------------------------------------------
+use db_ecommerce;
+delete  from tb_produtos where ID=1;
+------------------------------------
+use db_ecommerce;
+update tb_produtos set Name = "Monitor 1240hz SUPER 10K, marca: SUPER MEGA TAUBER MEGA MEGA", Valor = 1100000 where id=12;
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+

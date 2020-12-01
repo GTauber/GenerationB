@@ -1,0 +1,53 @@
+Atividade 07
+------------
+use db_locadora;
+create table tb_filmes
+----------------------
+use db_locadora;
+create table tb_filmes(
+ID bigint auto_increment,
+Name varchar(100),
+Genero varchar(40),
+Classificação int,
+disponivel boolean,
+primary key (ID));
+------------------------
+use db_locadora;
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Iron man", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Iron man 2", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Iron man 3", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Spider-Man", "Ficção Cientifica", 00, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Avengers", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Avengers 2", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Avengers 3", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Avengers Endgame", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Naruto","Ficção Cientifica", 00, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Dr. Strange",  "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("x-Men FirstClass", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Fantastic four", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("X-Men 2", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Wolverine - Immortal", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Venom", "Ficção Cientifica", 18, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("X-Men Apocalipse", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Thor - Ragnarok", "Ficção Cientifica", 14,  true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Jumanji", "Ficção Cientifica", 00, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("logan", "Ficção Cientifica", 18, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("X-Men Dark Phoenix", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("The Amazing Spider Man", "Ficção Cientifica", 00, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Spider Man 3", "Ficção Cientifica", 00, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Ant-Man", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Ant-Man and the Wasp", "Ficção Cientifica", 14, true);
+insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Jumanji 2", "Ficção Cientifica", 00, true);
+---------------------------------------------------------------------------------------------
+use db_locadora;
+select * from tb_filmes where Name "%S%"
+------------------------------------
+use db_locadora;
+select * from tb_filmes where Genero =  "%Ficção Cientifica%"
+--------------------------------------------------------------
+use db_locadora;
+delete from tb_filmes where ID=18;
+----------------------------------
+use db_locadora;
+update tb_filmes set Classificação = 18 where id=12;
+
