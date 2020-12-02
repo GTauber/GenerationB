@@ -33,7 +33,7 @@ insert into tb_animais (Name, Peso_in_kg, Mamifero, Vivo) value ("Jumanji", 87, 
 
 ---------------------------------------------------------------------------------------------
 use db_petshop;
-select * from tb_animais where Name= "%b%"
+select * from tb_animais where Name like "b%"
 ------------------------------------
 use db_petshop;
 select * from tb_animais where Peso_in_kg >20;

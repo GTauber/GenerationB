@@ -40,10 +40,10 @@ insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Ant-Ma
 insert into tb_filmes (Name, Genero, Classificação, disponivel) value ("Jumanji 2", "Ficção Cientifica", 00, true);
 ---------------------------------------------------------------------------------------------
 use db_locadora;
-select * from tb_filmes where Name "%S%"
+select * from tb_filmes where Name like "s%"
 ------------------------------------
 use db_locadora;
-select * from tb_filmes where Genero =  "%Ficção Cientifica%"
+select * from tb_filmes where Genero like "%Ficção Cientifica%"
 --------------------------------------------------------------
 use db_locadora;
 delete from tb_filmes where ID=18;
