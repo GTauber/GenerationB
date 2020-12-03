@@ -7,7 +7,7 @@ ID bigint auto_increment,
 Name varchar(100),
 Nr_Chamada bigint,
 Turma varchar(30),
-Notas double(2,2),
+Notas double(5,2),
 primary key (ID));
 ---------------------------------
 use db_escola;

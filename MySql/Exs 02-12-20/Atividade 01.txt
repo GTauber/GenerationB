@@ -1,0 +1,77 @@
+Atividade 01|
+-------------
+
+create database db_RH2
+-----------------------
+use db_RH2;
+create table tb_cargo (
+ID bigint auto_increment,
+Contratando boolean,
+Salario bigint(100),
+primary key (ID));
+-------------------------
+use db_RH2;
+create table tb_funcionario (
+ID bigint auto_increment,
+Name varchar(100),
+Cargo_ID bigint,
+Nivel_de_lindeza bigint(30),
+Ativo boolean,
+primary key (ID),
+foreign key (Cargo_ID) references tb_cargo (ID));
+-------------------------------------------------
+use db_RH2;
+alter table tb_cargo
+add column Cargo varchar(100);
+------------------------------
+use db_RH2;
+insert into tb_cargo (Contratando, Salario, cargo) value (false, 2500000,"Dono com sobrenome TAUBER");
+insert into tb_cargo (Contratando, Salario, cargo) value (false, 900000,"Amigo do dono");
+insert into tb_cargo (Contratando, Salario, cargo) value (false, 250000,"Engenharia");
+insert into tb_cargo (Contratando, Salario, cargo) value (true, 3500,"Operário");
+insert into tb_cargo (Contratando, Salario, cargo) value (true, 1001,"ESTAGIARIO");
+---------------------------------------------------------------------------------------------
+use db_RH2;
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Gabriel", 1, 100, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Mikayla", 3, 8, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Eduardo", 3, 7, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Lana", 3, 7, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Katia", 2, 9 ,true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Rebeca", 2, 10, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Lucas", 5, 6, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Naruto", 3, 6, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Sasuke", 6, 0, false);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Elizabeth", 5, 7, true);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Shisui", 5, 6, false);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Luan", 4, 0, false);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Henrique", 4, 0, false);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Pedro", 4, 2, false);
+insert into tb_funcionario (Name, Cargo_ID, Nivel_de_lindeza, Ativo) value ("Victória", 4, 10, true);
+---------------------------------------------------------------------------------------------
+use db_RH2;
+select tb_funcionario.name, tb_funcionario.Nivel_de_lindeza, tb_funcionario.Ativo, tb_cargo.Cargo, tb_cargo.Salario, tb_cargo.Contratando
+	from tb_funcionario 
+    inner join tb_cargo on tb_cargo.ID = tb_funcionario.Cargo_ID 
+    where tb_cargo.Salario >2000
+------------------------------------------------------------------------------------
+use db_RH2;
+select tb_funcionario.name, tb_funcionario.Nivel_de_lindeza, tb_funcionario.Ativo, tb_cargo.Cargo, tb_cargo.Salario, tb_cargo.Contratando
+	from tb_funcionario 
+    inner join tb_cargo on tb_cargo.ID = tb_funcionario.Cargo_ID 
+    where tb_funcionario.name like "C%"
+-------------------------------------------------------------------------------------
+use db_RH2;
+select tb_funcionario.name, tb_funcionario.Nivel_de_lindeza, tb_funcionario.Ativo, tb_cargo.Cargo, tb_cargo.Salario, tb_cargo.Contratando
+	from tb_funcionario 
+    inner join tb_cargo on tb_cargo.ID = tb_funcionario.Cargo_ID 
+--------------------------------------------------------------------------------------
+use db_RH2;
+select tb_funcionario.name, tb_funcionario.Nivel_de_lindeza, tb_funcionario.Ativo, tb_cargo.Cargo, tb_cargo.Salario, tb_cargo.Contratando
+	from tb_funcionario 
+    inner join tb_cargo on tb_cargo.ID = tb_funcionario.Cargo_ID 
+    where tb_cargo.Cargo like "Engenharia"
+
+
+
+
+
