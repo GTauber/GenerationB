@@ -1,5 +1,5 @@
-Atividade 4:
-
+Atividade 02: 
+-------------
 use db_ecommerce;
 create table tb_produtos(
 ID bigint,
@@ -26,25 +26,18 @@ insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Placa de vídeo
 insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Placa de vídeo RTX 3080", "NVIDIA", 9000, true);
 insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Placa de vídeo RTX 3070", "NVIDIA", 5000, true);
 insert into tb_produtos (Name, Marca, Valor, Disponivel) value ("Monitor 1240hz SUPER 10K", "SUPER TAUBER MEGA MEGA", 1000000, true);
--------------------------------------------------------------------------------------------
-use db_ecommerce
-select * from tb_produtos where Valor >500;
--------------------------------------------
-use db_ecommerce
-select * from tb_produtos where Valor <500;
--------------------------------------------
+--------------------------------------------------------------------------------------------
 use db_ecommerce;
-select * from tb_produtos where Valor >=700 && Valor <= 900;
-------------------------------------------------------------
+create table tb_categoria(
+ID bigint,
+categoria varchar(100),
+Cheiro varchar(100),
+primary key(ID));
+--------------------------
 use db_ecommerce;
-delete  from tb_produtos where ID=1;
-------------------------------------
-use db_ecommerce;
-update tb_produtos set Name = "Monitor 1240hz SUPER 10K, marca: SUPER MEGA TAUBER MEGA MEGA", Valor = 1100000 where id=12;
----------------------------------------------------------------------------------------------
-
-
-
+alter table tb_produtos
+add foreign key (Categoria_ID) references tb_categoria(ID)
+----------------------------------------------------------
 
 
 
