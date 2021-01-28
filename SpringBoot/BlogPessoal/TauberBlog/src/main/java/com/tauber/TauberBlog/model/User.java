@@ -27,6 +27,10 @@ public class User {
 	@NotNull
 	@Size(min = 2, max = 100)
 	private String pass;
+	
+	private String photo;
+	
+	private String level;
 
 	public long getId() {
 		return id;
